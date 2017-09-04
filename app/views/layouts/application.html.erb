@@ -19,16 +19,18 @@
             <span class="icon-bar"></span>
           </button>
           <%= link_to root_path, class: "navbar-brand" do %>
-            SoundzGood
+            Home
           <% end %>
           <%= link_to about_path, class: "navbar-brand" do %>
-            About
+            About Us
+          <% end %>
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <div class="nav navbar-nav navbar-right">
             <%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>
             <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default navbar-btn" %>
-            <%= link_to "Need Help?", new_support_path,class: "btn btn-default navbar-btn" %>
+            <%= link_to "Need Help?", new_contact_path, class: "btn btn-default navbar-btn" %>
+            
           </div>
         </div><!-- /.navbar-collapse -->
         </div>
@@ -36,11 +38,8 @@
     <div class="container">
      <% flash.each do |type, msg| %>
       <%= content_tag :div, msg, class: "alert alert-#{type}" %>
-    <% end %>
-    </div> 
+      <% end %>
       <%= yield %>
-    
-    
-  </body>
+      </div> 
+    </body>
 </html>
-

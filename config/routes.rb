@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#homepage'
+  root to: 'pages#home'
   resources :users do
   resource :profile
   end
-  get 'aboutus', to: 'pages#aboutus'
+  get 'about', to: 'pages#about'
+  #get 'player', to: 'pages#player'
   resources :contacts, only: :create
-  get 'support', to: 'contacts#new', as: 'new_contact'
-end
+  get 'contact-us', to: 'contacts#new', as: 'new_contact'
+ end

@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
        flash[:success] = "The support team will respond in 24 hours or less."
        redirect_to new_contact_path
     else
-       flash[:danger] = "Please add more details for support team to respond."
+       flash[:danger] = @contact.errors.full_messages.join(", ")
        redirect_to new_contact_path
     end
   end

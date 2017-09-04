@@ -1,16 +1,21 @@
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
  
-
-
 // Typography Styles
 h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
 }
+p{
+  font-size: 18px;
+}
 
+link{
+  font-color: white;
+}
+// Background 
 .navbar, .home-callout {
+  background: #2E8B57; 
   
-  background: #32CD32
 }
 // Nav Styles
 .navbar {
@@ -20,6 +25,7 @@ h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
 }
+
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
